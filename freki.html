@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="css.css">
+</head>
+<body>
+	<div class="menu-container">
+  
+		<input type="checkbox" id="openmenu" class="hamburger-checkbox">
+		
+		<div class="hamburger-icon">
+		  <label for="openmenu" id="hamburger-label">
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+		  </label>    
+		</div>
+	  
+		  <div class="menu-pane">
+			
+			<nav>
+			  <ul class="menu-links">
+				<li><a href="main.html">Home</a><span id="QC-info">
+				</span>
+				  
+				</li>
+				
+				<li><a href="vegyeskapcs.html">Vegyeskapcsolás</a>
+				 
+				</li>
+				<li><a href="freki.html">Frekiszámoló</a></li>
+				<li><a href="###">igen</a></li>
+                
+			  </ul>
+			</nav>
+		  </div>
+		<div class="body-text">
+            <img src="igen.jpg" alt="rezófreki képlet" width="500">
+            <br>
+            <br>
+            <form action="">
+                <label for="induk">Add meg az induktivitás értékét: </label>
+                <input type="number" name="induk" id="induk"> uH <br><br>
+                <label for="capac">Add meg a kapacitás értékét: </label>
+                <input type="number" name="capac" id="capac"> uF <br><br>
+                <input type="button" onclick="szamol()" value="ENTER">
+                <br>
+            </form>
+            <script>
+                let freki = 0;
+                function szamol(){
+                    
+                }
+            </script>
+		</div>
+	  </div>
+</body>
+</html>
