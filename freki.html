@@ -41,18 +41,26 @@
             <br>
             <form action="">
                 <label for="induk">Add meg az induktivitás értékét: </label>
-                <input type="number" name="induk" id="induk"> uH <br><br>
+                <input type="number" name="induk" id="induk"> uH <br>
                 <label for="capac">Add meg a kapacitás értékét: </label>
-                <input type="number" name="capac" id="capac"> uF <br><br>
+                <input type="number" name="capac" id="capac"> uF <br> <br>
                 <input type="button" onclick="szamol()" value="ENTER">
                 <br>
             </form>
-            <script>
-            <h2 id='fo'>Eredmény: </h2>
+            <br>
+            <span>Freki = </span>
+            <span id="fo"> ... </span>
+            <span> Hz</span>
             <script>
                 let freki = 0;
                 function szamol(){
-                    freki = parseInt(induk.value) + parseInt(capac.value) ;
+                    let L = parseInt(induk.value) / 1000000;
+                    let C = parseInt(capac.value) / 1000000;
+                    let freki = L * C ;
+                    freki = Math.sqrt(freki);
+                    freki = 2 * freki;
+                    freki = Math.PI * freki;
+                    freki = 1 / freki;
                     document.getElementById('fo').innerHTML = freki;         
                     
                     }
