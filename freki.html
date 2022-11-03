@@ -48,10 +48,14 @@
                 <br>
             </form>
             <script>
+            <h2 id='fo'>Eredmény: </h2>
+            <script>
                 let freki = 0;
                 function szamol(){
+                    freki = parseInt(induk.value) + parseInt(capac.value) ;
+                    document.getElementById('fo').innerHTML = freki;         
                     
-                }
+                    }
             </script>
 		</div>
 	  </div>
